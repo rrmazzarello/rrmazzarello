@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Jurídico</title>
+</head>
+<body>
+    <h1>Chatbot Jurídico</h1>
+    <form action="/preguntar" method="post">
+        <label for="pregunta">Haz una pregunta:</label>
+        <input type="text" name="pregunta" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if pregunta %}
+        <p>Tu pregunta: {{ pregunta }}</p>
+        <p>Respuesta del Chatbot: {{ respuesta }}</p>
+    {% endif %}
+</body>
+</html>
+
